@@ -11,23 +11,40 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="index.html">Navbar</a>
+  <a class="navbar-brand" href="index.html"> Queen </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown link
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Members
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="detail-entry-example.html">Entry example</a>
-          <a class="dropdown-item" href="detail-book-shipping-news.html">Data detail example</a>
-          <a class="dropdown-item" href="#">Extra link goes nowhere</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="freddie-mercury.html"> Freddie Mercury </a>
+          <a class="dropdown-item" href="brian-may.html"> Brian May </a>
+          <a class="dropdown-item" href= "roger-taylor.html"> Roger Taylor </a>
+          <a class="dropdown-item" href="john-deacon.html"> John Deacon </a>
         </div>
       </li>
+        <li class="nav-item">
+        <a class="nav-link" href="discography.html"> Discography </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="billboard.html"> Billboard </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="tour.html"> Tour </a>
+      </li>
     </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
   </div>
 </nav>
 
@@ -41,21 +58,29 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <h1>Main headline</h1>
-      <p>This is a <a href="detail-entry-example.html">link to a blog entry example</a> which shows a simple detail entry page example. It uses the "data-entry.njk" layout.</p>
-      <p>This is a <a href="detail-book-shipping-news.html">link to a book page example</a> which uses a more complex detail layout (detail-book.njk) where data is pulled into the layout and the page calls for a specific row in the data.</p>
-      <ul> 
-        
-          <li>The Clown, Heinrich Böll</li>
-        
-          <li>The Shipping News, Annie Proulx</li>
-        
-          <li>The Hearing Trumpet, Leonora Carrington</li>
-        
-     </ul>
+          <h1> Queen </h1>
+          <ul>
+     
+  <h3 class="members-name"><a href="freddie-mercury.html">Freddie Mercury</a></h3>
+  <p class="members-instruments">Vocals, keyboards</p>
+  <hr>
+
+  <h3 class="members-name"><a href="brian-may.html">Brian May</a></h3>
+  <p class="members-instruments">Guitar, keyboards, vocals</p>
+  <hr>
+
+  <h3 class="members-name"><a href="roger-taylor.html">Roger Taylor</a></h3>
+  <p class="members-instruments">Drums, guitar, keyboards, vocals</p>
+  <hr>
+
+  <h3 class="members-name"><a href="john-deacon.html">John Deacon</a></h3>
+  <p class="members-instruments">Bass, guitar, keyboards</p>
+  <hr>
+
+  </ul>
     </div>
+    <div>
   </div>
-</div>
 
 
   <footer>
