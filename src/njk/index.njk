@@ -9,15 +9,17 @@
 <div class="container">
   <div class="row">
     <div class="col">
-          <h1> Queen </h1>
-          <ul>
-     {% for members in queen.members %}
-  <h3 class="members-name"><a href="{{ members.url }}">{{ members.name }}</a></h3>
-  <p class="members-instruments">{{ members.instruments }}</p>
+    <h1> Queen </h1>
+    <div id= "content">
+   <p> Random Queen text </p>
+   </div>
+<div class= "member pages">
+     {% for member in queen.members %}
+    <h3 class="member name"> <a href="{{ member.url }}">{{ member.name }}</a></h3> 
+  <p class="member instruments">{{ member.instruments }}</p>
   <hr>
 {% endfor %}
-  </ul>
     </div>
-    <div>
   </div>
+</div>
 {% endblock %}

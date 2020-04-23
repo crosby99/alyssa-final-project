@@ -2,12 +2,12 @@
 {% set members = queen.members[0] %}
 {% block page_title %}{{ members.name }}{% endblock %}
 
-% block page_description %}Detail page entry for {{members.name}}.{% endblock %}
+{% block page_description %} Detail page entry for {{ members.name }}. {% endblock %}
 
 {% block story %}
   <h1>{{ members.name }}</h1>
-  <h5> {{members.instruments}}</h5>
-  <p>  </p>
+  <h5> {{ members.instruments }}</h5>
+  <p> Freddie Mercury text </p>
 <div>
-<img src= "img/kraken02.jpg" class="img-fluid" alt="Kraken photo 2">
+<img src= "{{ members.image }}" class="img-fluid" alt="members.name image">
 {% endblock %}
