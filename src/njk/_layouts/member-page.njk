@@ -4,18 +4,22 @@
 {% block page_description %} Detail page entry for {{ member.name }}. {% endblock %}
 
 {% block content %}
+
+<link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
+
 <article class="container">
   <div class="row">
     <div class="col-sm-4">
       {% block info %}
         <img src="img/members/{{ member.image }}" alt="{{ member.name }} image" class="img-fluid">
-        <p class="caption">{{ member.name }}</p>
+        <p class="caption text-center">{{ member.name }}</p>
       {% endblock %}
     </div>
     <div class="col-sm-8">
       {% block story %}
-        <h1>{{ member.name }}</h1>
-        <p>{{ member.text }}</p>
+        <h1 class= "member-headline">{{ member.name }}</h1>
+        <h5> {{member.instruments}} </h5>
+        <p>{{ member.text | safe}}</p>
       {% endblock %}
     </div>
   </div>
