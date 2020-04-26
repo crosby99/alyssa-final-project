@@ -1,21 +1,57 @@
 {% extends '_layouts/base.njk' %}
+{% set discography = queen.discography %}
 
 {% block page_title %} Discography {% endblock %}
 
-{% block page_description %}Queen Discography{% endblock %}
-{%set discography = queen.discography%}
-{% block info %}
-  <div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      {{discography.image}}
-    </div>
-    <div class="col-sm-4">
-      {{discography.title}}
-    </div>
-    <div class="col-sm-4">
-      {{discography.year}}
-    </div>
+{% block page_description %} Queen Discography {% endblock %}
+
+{% block content %}
+  {% for discography in queen.discography %}
+  <div class="media">
+    {% block image %}
+      <img src="img/discs/{{discography.image}}" class="align-self-start mr-3" alt="{{discography.title}} Album Art">
+    {% endblock %}
+  <div class="media-body">
+    {% block title %}
+      <h5 class="mt-0">{{discography.title}}</h5>
+    {% endblock %}
+    {% block year %}
+      <p> {{discography.year}}</p>
+    {% endblock %}
+  </div>
+</div>
+
+{% endfor %}
   </div>
 </div>
 {% endblock %}
+
+
+
+
+
+{# {% block content %}
+  {% for discography in queen.discography %}
+  <div class="container text-center">
+    <div class="grid">
+      <div class="row">
+        <div class="col-sm-4">
+          {% block image %}
+            <img src="img/discs/{{discography.image}}" alt="{{discography.title}} Album Art" class="img-fluid">
+          {% endblock %}
+        </div>
+        <div class="col-sm-4">
+          {% block title %}
+            <h2> {{discography.title}} </h2>
+          {% endblock %}
+        </div>
+        <div class="col-sm-4">
+          {% block year %}
+            <h2> {{discography.year}} </h2>
+        {% endblock %}
+      </div>
+      {% endfor %}
+  </div>
+</div>
+
+{% endblock %} #}
