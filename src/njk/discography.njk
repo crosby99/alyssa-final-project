@@ -4,15 +4,13 @@
 {% block page_title %} Discography {% endblock %}
 {% block page_description %} Queen Discography {% endblock %}
 
-
+{% block content %}
 <div class="container">
     <div class="row">
-      <div class="col">
+      <div class="col-sm">
       <h1 class="discography" style="text-align:center"> Discography </h1>
       <div id= "content">
     </div>
-    
-{% block content %}
 <div class="container">
     <div class="row">
       <div class="col">
@@ -21,9 +19,8 @@
               <div class="card text-center">
                 <img src="img/discs/{{discography.image}}" class="card-img-top" alt="{{discography.title}}">
                 <div class="card-body">
-                  <h5 class="card-title">{{discography.title}}</h5>
-                  <p class="card-text">{{discography.year}}</p>
-                  {# <a href="{{member.url}}" class="btn btn-primary"> Buy Now</a> #}
+                  <h3 class="card-title">{{discography.title}}</h3>
+                  <h4 class="card-text">{{discography.year}}</h4>
                 </div>
             </div>
   {% endfor %}
@@ -31,44 +28,3 @@
   </div>
 </div>
 {% endblock %}
-
-
-{# <div class="media">
-    {% block image %}
-      <img src="img/discs/{{discography.image}}" class="align-self-start mr-3" alt="{{discography.title}} Album Art">
-    {% endblock %}
-  <div class="media-body">
-    {% block title %}
-      <h5 class="mt-0">{{discography.title}}</h5>
-    {% endblock %}
-    {% block year %}
-      <p> {{discography.year}}</p> #}
-
-
-
-
-{# {% block content %}
-  {% for discography in queen.discography %}
-  <div class="container text-center">
-    <div class="grid">
-      <div class="row">
-        <div class="col-sm-4">
-          {% block image %}
-            <img src="img/discs/{{discography.image}}" alt="{{discography.title}} Album Art" class="img-fluid">
-          {% endblock %}
-        </div>
-        <div class="col-sm-4">
-          {% block title %}
-            <h2> {{discography.title}} </h2>
-          {% endblock %}
-        </div>
-        <div class="col-sm-4">
-          {% block year %}
-            <h2> {{discography.year}} </h2>
-        {% endblock %}
-      </div>
-      {% endfor %}
-  </div>
-</div>
-
-{% endblock %} #}
