@@ -2,10 +2,15 @@
 {% set discography = queen.discography %}
 
 {% block page_title %} Discography {% endblock %}
-
 {% block page_description %} Queen Discography {% endblock %}
 
 {% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+    <h1 class="discography" style="text-align:center"> Discography </h1>
+    <div id= "content">
+</div>
   {% for discography in queen.discography %}
   <div class="media">
     {% block image %}
