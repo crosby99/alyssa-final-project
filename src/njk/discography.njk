@@ -4,15 +4,36 @@
 {% block page_title %} Discography {% endblock %}
 {% block page_description %} Queen Discography {% endblock %}
 
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+      <h1 class="discography" style="text-align:center"> Discography </h1>
+      <div id= "content">
+    </div>
+    
 {% block content %}
 <div class="container">
-  <div class="row">
-    <div class="col">
-    <h1 class="discography" style="text-align:center"> Discography </h1>
-    <div id= "content">
+    <div class="row">
+      <div class="col">
+        <div class="card-columns">
+                    {% for discography in queen.discography %}
+              <div class="card text-center">
+                <img src="img/discs/{{discography.image}}" class="card-img-top" alt="{{discography.title}}">
+                <div class="card-body">
+                  <h5 class="card-title">{{discography.title}}</h5>
+                  <p class="card-text">{{discography.year}}</p>
+                  {# <a href="{{member.url}}" class="btn btn-primary"> Buy Now</a> #}
+                </div>
+            </div>
+  {% endfor %}
+    </div>
+  </div>
 </div>
-  {% for discography in queen.discography %}
-  <div class="media">
+{% endblock %}
+
+
+{# <div class="media">
     {% block image %}
       <img src="img/discs/{{discography.image}}" class="align-self-start mr-3" alt="{{discography.title}} Album Art">
     {% endblock %}
@@ -21,16 +42,7 @@
       <h5 class="mt-0">{{discography.title}}</h5>
     {% endblock %}
     {% block year %}
-      <p> {{discography.year}}</p>
-    {% endblock %}
-  </div>
-</div>
-
-{% endfor %}
-  </div>
-</div>
-{% endblock %}
-
+      <p> {{discography.year}}</p> #}
 
 
 
