@@ -13,11 +13,16 @@
     <div id= "content">
    <p> Random Queen text </p>
    </div>
-<div class= "member pages">
-     {% for member in queen.members %}
-    <h3 class="member name"> <a href="{{ member.url }}">{{ member.name }}</a></h3> 
-  <p class="member instruments">{{ member.instruments }}</p>
-  <hr>
+        <div class="card-deck">
+        {% for member in queen.members %}
+  <div class="card text-center">
+    <img src="img/members/{{member.imagebw}}" class="card-img-top" alt="{{member.name}}">
+    <div class="card-body">
+      <h5 class="card-title">{{member.name}}</h5>
+      <p class="card-text">{{member.instruments}}</p>
+      <a href="{{member.url}}" class="btn btn-primary"> Learn More</a>
+    </div>
+</div>
 {% endfor %}
     </div>
   </div>

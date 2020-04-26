@@ -1,0 +1,21 @@
+{% extends '_layouts/base.njk' %}
+
+{% block page_title %} Discography {% endblock %}
+
+{% block page_description %}Queen Discography{% endblock %}
+{%set discography = queen.discography%}
+{% block info %}
+  <div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      {{discography.image}}
+    </div>
+    <div class="col-sm-4">
+      {{discography.title}}
+    </div>
+    <div class="col-sm-4">
+      {{discography.year}}
+    </div>
+  </div>
+</div>
+{% endblock %}
