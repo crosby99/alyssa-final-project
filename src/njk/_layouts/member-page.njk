@@ -4,26 +4,26 @@
 {% block page_description %} Detail page entry for {{ member.name }}. {% endblock %}
 
 {% block content %}
-
 <article class="container">
   <div class="row">
     <div class="col-sm-4">
-      {% block info %}
-        <img src="img/members/{{ member.image }}" alt="{{ member.name }} image" class="img-fluid">
-        <p class="caption text-center">{{ member.name }}</p>
-      {% endblock %}
-    </div>
-    <div class="col-sm-8">
-      {% block story %}
-        <h1 class= "member-headline">{{ member.name }}</h1>
-        <h5> {{member.instruments}} </h5>
-        <div class="member-information">
-          <p>  {{member.birthdate | safe}} </p>
-          <p>  {{member.birthplace | safe}} </p>
-          <p>  {{member.tenure | safe}} </p>
-        </div>
-        <p> {{ member.text | safe}}</p>
-      {% endblock %}
+        {% block info %}
+          <img src="img/members/{{ member.image }}" alt="{{ member.name }} image" class="img-fluid">
+          <p class="caption text-center">{{ member.name }}</p>
+        {% endblock %}
+      </div>
+      <div class="col-sm-8">
+        {% block story %}
+          <h1 class= "member-headline">{{ member.name }}</h1>
+          <h5> {{member.instruments}} </h5>
+          <div class="member-information">
+            <p>  {{member.birthdate | safe}} </p>
+            <p>  {{member.birthplace | safe}} </p>
+            <p>  {{member.tenure | safe}} </p>
+          </div>
+          <p> {{ member.text | safe}}</p>
+        {% endblock %}
+      </div>
     </div>
   </div>
 </article>
