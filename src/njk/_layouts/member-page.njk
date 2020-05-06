@@ -18,9 +18,9 @@
         <h1 class= "member-headline">{{ member.name }}</h1>
         <h5> {{member.instruments}} </h5>
         <div class="member-information">
-          <p>  {{member.tenure | safe}} </p>
           <p>  {{member.birthdate | safe}} </p>
           <p>  {{member.birthplace | safe}} </p>
+          <p>  {{member.tenure | safe}} </p>
         </div>
         <p> {{ member.text | safe}}</p>
       {% endblock %}
