@@ -5,8 +5,8 @@
 {% block page_description %} Information on the band "Queen."{% endblock %}
 
 <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
-{% block content %}
 
+{% block content %}
 <div class="container">
   <div class="row">
     <div class="col">
@@ -19,12 +19,12 @@
   <div class="card-deck">
 {% for member in queen.members %}
   <div class="col-sm">
-    <div class="card text-center">
+    <div class="card text-center mb-2">
       <img src="img/members/{{member.imagebw}}" class="card-img-top" alt="{{member.name}}">
       <div class="card-body">
-      <h5 class="card-title">{{member.name}}</h5>
-      <p class="card-text">{{member.instruments}}</p>
-      <a href="{{member.url}}" class="btn btn-primary"> Learn More </a>
+        <h5 class="card-title">{{member.name}}</h5>
+        <p class="card-text">{{member.instruments}}</p>
+        <a href="{{member.url}}" class="btn btn-primary"> Learn More </a>
       </div>
     </div>
   </div>
